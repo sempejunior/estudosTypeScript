@@ -1,0 +1,4 @@
+Important Links to React
+
+Methods Lifecycle
+https://engineering.musefind.com/react-lifecycle-methods-how-and-when-to-use-them-2111a1b692b1
