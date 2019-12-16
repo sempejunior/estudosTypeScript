@@ -1,0 +1,68 @@
+Comandos Kubernets
+
+Alterar ambiente kubernets
+kubectl config use-context hml
+
+Alterar Yml Kubernets
+kubectl edit cm givex-config -o yaml
+
+Verificar pods
+kubectl get pods
+
+Verificar logs
+kubectl log "api-selfpayment-geolocalizacao-1005056928-gqrbw"
+
+Listar Config map
+kubectl get configmap
+
+Verificar config map
+kubectl get cm pague-digital-config -o yaml
+
+Editar config map
+kubectl edit cm pague-digital-config -o yaml
+
+Ver Services
+kubectl get service
+
+Deletar Services
+kubectl delete svc api-obter-cliente-v2
+
+
+Executar comando dentro da maquina do pod:
+kubectl exec nomePod comandoDOS
+	Exemplo
+	kubectl exec api-obter-cliente-2962027517-6xc9j ping as474
+
+Comandos Docker
+
+Login
+docker login
+
+Criar a VM
+docker build -t nomeDaApi:nomeTag .
+
+
+Ver todas imagens
+docker images
+
+Remover imagem
+docker rmi imagemQueSeraRemovida
+
+Subir container
+docker run -d -p portaQueSeraExpostaNoLocalhost:PortaDocker imagemId
+Ex: sudo docker run -d -p 3022:3020 f3bd7ab557ee-
+
+Gerar Build para Repository Docker HUB
+docker build -t nomeUsuarioHub/idAPI:versao
+
+Enviar para o repository
+docker push idAPI:versao
+
+Docker Compose
+Responsável por subir uma lista de imagens. Basta criar um arquivo docker-compose.yaml.
+
+Subir um compose:
+docker-compose up
+
+Verificar as imagens up:
+docker-compose ps 
