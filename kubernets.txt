@@ -1,4 +1,4 @@
-Comandos Kubernets
+﻿Comandos Kubernets
 
 Alterar ambiente kubernets
 kubectl config use-context hml
@@ -32,6 +32,12 @@ Executar comando dentro da maquina do pod:
 kubectl exec nomePod comandoDOS
 	Exemplo
 	kubectl exec api-obter-cliente-2962027517-6xc9j ping as474
+
+Verificar Ips Pods
+kubectl get pods -o wide
+
+Olhar log em tempo real
+kubectl logs -f api-faturamento-1394808666-2x760 > logFaturamento.log
 
 Comandos Docker
 
